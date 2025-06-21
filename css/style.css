@@ -23,16 +23,30 @@
 }
 
 .footer-wrapper {
-  background-image: url("https://de1wwae7728z6.cloudfront.net/images/klee/klee-home_hero.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 25vh;
-  padding: 10px;
+  position: relative;
+  height: 100vh;
+  padding: 10px 200px;
   display: flex;
-  align-items: flex-end; /* push content to bottom */
+  align-items: flex-end;
+  overflow: hidden;
 }
 
-h4 {
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.footer-content {
+  z-index: 1;
+}
+
+
+h4, h4 a {
   color: var(--color-cream);
 }
 
@@ -263,6 +277,9 @@ p, h4 {
 
   .asset-desc {
     display: none;
+  }
+  .footer-wrapper {
+    padding: 10px 10px;
   }
 
   .text-wrapper, .landing-wrapper{
