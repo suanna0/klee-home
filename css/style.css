@@ -35,7 +35,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
   object-fit: cover;
   z-index: -1;
@@ -159,13 +159,6 @@ h2 {
   letter-spacing: -0.04em;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 10px; 
-  row-gap: 10px;
-}
-
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -260,6 +253,10 @@ p, h4 {
   }
 
   .content {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
     grid-template-columns: 1fr;
   }
 
