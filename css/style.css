@@ -63,10 +63,6 @@ body {
   background-color: var(--color-bg);
 }
 
-.header img {
-  width: 125px;
-}
-
 .down-arrow {
   position: absolute;
   bottom: 20px;
@@ -101,17 +97,23 @@ body {
   padding-bottom: 10vh;
 }
 
-.header, .description {
+.header {
   position: sticky;
   top: 0px;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;         /* or any fixed or viewport-relative height */
+  width: 100%;           /* make sure it spans fully */
+  box-sizing: border-box;
 }
 
-.header {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
+.header img {
+  width: 125px;
+  display: block;        /* avoids baseline alignment issues */
 }
+
 
 h1 {
   font-family: "adobe-caslon-pro", serif;
