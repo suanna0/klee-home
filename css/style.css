@@ -153,6 +153,7 @@ h1 {
   column-gap: 30px; 
   position: relative;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
 .credits-container {
@@ -242,7 +243,10 @@ p, h4 {
   }
 
   .content {
-    grid-template-columns: 1fr;
+    width: 100%;
+    grid-template-columns: 1fr;      
+    box-sizing: border-box;
+
   }
 
   .about {
