@@ -138,12 +138,6 @@ h1 {
   line-height: 1;
 }
 
-.description {
-  position: sticky;
-  top: 90px;
-  align-self: start; 
-}
-
 #goToTop {
   position: absolute;
   top: 20px;
@@ -153,19 +147,12 @@ h1 {
   cursor: pointer;
 }
 
-h2 {
-  font-size: 40px;
-  font-family: "parabolica", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: -0.04em;
-}
-
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px; 
   position: relative;
+  max-width: 1000px;
 }
 
 .credits-container {
