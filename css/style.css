@@ -307,6 +307,10 @@ p, h4 {
   height: 277px;
   }
 
+  .carousel {
+    margin-top: 50px;
+  }
+
   .carousel-wrapper {
     height: 410px; 
   }
