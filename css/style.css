@@ -255,14 +255,6 @@ p, h4 {
   font-weight: 300;
 }
 
-#production {
-  margin-bottom: 50px;
-}
-
-#production p {
-  text-align: center;
-}
-
 @media (max-width: 768px) {
   .landing-content img {
     padding-bottom: 40vh;
@@ -303,16 +295,16 @@ p, h4 {
   }
 
   .card {
-  width: 200px;
-  height: 277px;
+    width: 200px;
+    height: 277px;
   }
 
   .carousel {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .carousel-wrapper {
-    height: 410px; 
+    height: 340px; 
   }
   
   p, h4 {
