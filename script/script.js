@@ -64,3 +64,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const carousel = document.querySelector(".carousel");
+  const cards = gsap.utils.toArray(".card");
+
+  // Duplicate cards to simulate seamless loop
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  const totalWidth = carousel.scrollWidth / 2;
+
+  gsap.to(carousel, {
+    x: `-=${totalWidth}`,
+    duration: 20,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % totalWidth)
+    }
+  });
+
+  gsap.utils.toArray(".card").forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    gsap.to(card, {
+      y: -100,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to(card, {
+      y: 0,
+      duration: 0.4,
+      ease: "power2.inOut"
+    });
+  });
+});
